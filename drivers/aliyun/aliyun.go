@@ -57,9 +57,16 @@ func (d *Driver) Send(request sms.Request) (response sms.Resposne, err error) {
 	}
 
 	resp, err := d.client.SendSms(&req)
+	if err != nil {
+		return
+	}
 
+	content, err := json.Marshal(resp.Body)
+	if err != nil {
+		return
+	}
 	response = sms.Resposne{
-		Raw: resp.GoString(),
+		Raw: string(content),
 	}
 
 	return

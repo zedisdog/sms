@@ -10,11 +10,15 @@ type Request struct {
 }
 
 type Resposne struct {
-	Raw string //原始数据
+	Raw string //原始数据, json字符串
 }
 
 type IDriver interface {
 	Send(request Request) (Resposne, error)
+}
+
+func New() *Sms {
+	return &Sms{}
 }
 
 type Sms struct {
@@ -34,4 +38,9 @@ func (s *Sms) Send(request Request, driver ...string) (response Resposne, err er
 	}
 
 	return drv.Send(request)
+
+}
+
+func (s *Sms) Register(name string, driver IDriver) {
+	s.drivers[name] = driver
 }
