@@ -18,7 +18,9 @@ type IDriver interface {
 }
 
 func New() *Sms {
-	return &Sms{}
+	return &Sms{
+		drivers: make(map[string]IDriver),
+	}
 }
 
 type Sms struct {
