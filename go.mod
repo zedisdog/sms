@@ -6,6 +6,8 @@ require (
 	github.com/alibabacloud-go/darabonba-openapi v0.1.18
 	github.com/alibabacloud-go/dysmsapi-20170525/v2 v2.0.18
 	github.com/alibabacloud-go/tea v1.1.19
+	github.com/gogf/gf/v2 v2.4.2
+	github.com/qiniu/go-sdk/v7 v7.16.0
 )
 
 require (
@@ -21,6 +23,8 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/tjfoc/gmsm v1.3.2 // indirect
-	golang.org/x/net v0.0.0-20200506145744-7e3656a0809f // indirect
+	go.opentelemetry.io/otel v1.7.0 // indirect
+	go.opentelemetry.io/otel/trace v1.7.0 // indirect
+	golang.org/x/net v0.1.0 // indirect
 	gopkg.in/ini.v1 v1.56.0 // indirect
 )
